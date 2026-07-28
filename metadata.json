@@ -1,0 +1,8 @@
+{
+  "name": "Yastar",
+  "description": "Business decision support web application for salon, barbershop, nail studio, and spa owners",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

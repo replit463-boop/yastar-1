@@ -1,0 +1,26 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "artifacts/*",
+    "lib/*",
+    "scripts"
+  ],
+  "scripts": {
+    "dev": "tsx watch artifacts/api-server/src/index.ts",
+    "build": "npm run typecheck && npm run build --workspace=@workspace/api-server",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "npm run typecheck:libs"
+  },
+  "private": true,
+  "dependencies": {
+    "@google/genai": "^2.13.0",
+    "@replit/connectors-sdk": "^0.4.1"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.5",
+    "tsx": "^4.21.0",
+    "typescript": "~5.9.3"
+  }
+}
